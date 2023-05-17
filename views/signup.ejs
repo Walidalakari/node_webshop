@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/style.css" />
+    <title>SignUp</title>
+  </head>
+  <body>
+    <nav>
+      <% if(user){ %>
+      <h2>Dropdown</h2>
+      <% } %>
+      <h1>Webshop</h1>
+      <div>
+        <li><a href="/signin">SignIn</a></li>
+        <li><a href="/signup">SignUp</a></li>
+      </div>
+    </nav>
+    <form method="POST" action="/signup">
+      <label for="">Name</label>
+      <input type="text" name="name" placeholder="Insert your name" />
+      <label for="">Email</label>
+      <input type="email" name="email" placeholder="Insert your email" />
+      <label for="">Password</label>
+      <input
+        type="password"
+        name="password"
+        placeholder="Insert your password"
+      />
+      <select name="sex" id="">
+        <option value="1" selected="selected">Male</option>
+        <option value="0">Female</option>
+      </select>
+      <button type="submit">Sign Up</button>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+<body>
+  <nav>
+    <% if(user){ %>
+      <div class="dropdown">
+        <h2>Dropdown</h2>
+        <div class="dropdown-content">
+          <li>
+            <a href="/jeans">Jeans</a>
+            <a href="/shirts">Shirts</a>
+            <a href="/jackets">Jackets</a>
+          </li>
+        </div>
+      </div>
+    <% } %>
+    <h1>Webshop</h1>
+    <div>
+      <% if(user){ %>
+        <li><a href="/signin">Logout</a></li>
+      <% }else{%>
+        <li><a href="/signin">SignIn</a></li>
+      <li><a href="/signup">SignUp</a></li>
+      <%}%>
+    </div>
+  </nav>
+  <div class="container">
+    <% produkterna.forEach(function(produkt) { %>
+      <div class="card">
+        <img src="<%= produkt.img %>" alt="<%= produkt.Produkt %>">
+        <div class="card-container">
+          <h4><b><%= produkt.Produkt %></b></h4> 
+          <p><%= produkt.beskrivning %></p> 
+          <p><%= produkt.price %></p> 
+        </div>
+      </div>
+    <% }) %>
+  </div>
+
+</body>
+</html> 
+</body>
+</html>

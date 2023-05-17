@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Cart</title>
+  </head>
+  <body>
+    <nav>
+      <h1>Cart</h1>
+      <div>
+        <li><a href="/logout">Logout</a></li>
+      </div>
+    </nav>
+    <div class="container">
+      <% if (produkterna.length === 0) { %>
+      <p>Your cart is empty.</p>
+      <% } else { %> <% produkterna.forEach(function(produkt) { %>
+      <div class="card">
+        <div class="card-container">
+          <h4><b><%= produkt.namn %></b></h4>
+          <p>Price: <%= produkt.pris %></p>
+        </div>
+      </div>
+      <% }) %> <% } %>
+    </div>
+  </body>
+</html>

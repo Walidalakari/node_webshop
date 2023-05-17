@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/assets/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Skriva till databas</h2>
+    <a href="/">Go back</a>
+    <br /><br />
+    <form action="/p" method="POST" enctype="multipart/form-data">
+      <label for="title">produkt:</label>
+      <input type="text" name="produkt" /><br /><br />
+      <label for="kategorier">kategori:</label>
+      <select name="kategorier">
+        <option value="Jeans">Jeans</option>
+        <option value="Shirts">Shirts</option>
+        <option value="Jackets">Jackets</option>
+      </select>
+      <br /><br />
+      <label for="title">beskrivning:</label>
+      <input type="text" name="beskrivning" /><br /><br />
+      <label for="text">price:</label>
+      <input type="text" name="price" /><br /><br />
+      <label for="img">Image:</label>
+      <input type="file" accept="image/*" name="img" /><br />
+      <button type="submit">Ok</button>
+    </form>
+  </body>
+</html>
